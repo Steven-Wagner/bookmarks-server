@@ -1,0 +1,7 @@
+{"message":"unauthorized rquest to / path","level":"error"}
+{"message":"unauthorized rquest to / path","level":"error"}
+{"message":"requires url at path /bookmarks","level":"error"}
+{"message":"bookmark with id 1 has been deleted","level":"info"}
+{"message":"bookmark with id 1 has been deleted","level":"info"}
+{"message":"id 1 can not be located","level":"error"}
+{"message":"id 3 can not be located","level":"error"}
