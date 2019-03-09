@@ -5,3 +5,4 @@
 {"message":"bookmark with id 1 has been deleted","level":"info"}
 {"message":"id 1 can not be located","level":"error"}
 {"message":"id 3 can not be located","level":"error"}
+{"message":"id 12345 can not be located","level":"error"}
