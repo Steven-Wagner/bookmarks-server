@@ -9,18 +9,18 @@ const bookmarksRouter = require('./bookmarks/bookmark')
 
 const app = express();
 
-// app.use(function validateKey(req, res, next){
-//     const apiToken = process.env.API_TOKEN;
-//     const toValidateKey = req.get('Authorization').split(' ')[1]
+app.use(function validateKey(req, res, next){
+    const apiToken = process.env.API_TOKEN;
+    const toValidateKey = req.get('Authorization').split(' ')[1]
 
-//     if (!toValidateKey || toValidateKey !== apiToken) {
-//         logger.error(`unauthorized request to ${req.path} path`);
-//         return res
-//             .status(401)
-//             .json({error: 'unauthorized request'})
-//     }
-//     next();
-// })
+    if (!toValidateKey || toValidateKey !== apiToken) {
+        logger.error(`unauthorized request to ${req.path} path`);
+        return res
+            .status(401)
+            .json({error: 'unauthorized request'})
+    }
+    next();
+})
 
 const morganSetting = (NODE_ENV === 'production')
     ? 'tiny'

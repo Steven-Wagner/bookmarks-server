@@ -32,6 +32,7 @@ describe('App', () => {
             it('GET /bookmarks returns all bookmarks', () => {
                 return request(app)
                     .get('/bookmarks')
+                    .set({'Authorization': `bearer ${process.env.API_TOKEN}`})
                     .expect(200, testData)
             })
         })
@@ -39,6 +40,7 @@ describe('App', () => {
             it(`GET /bookmarks returns []`, () => {
                 return request(app)
                     .get('/bookmarks')
+                    .set({'Authorization': `bearer ${process.env.API_TOKEN}`})
                     .expect(200, [])
             })
         })
@@ -58,6 +60,7 @@ describe('App', () => {
                 const correctBookmark = testData[correctId-1]
                 return request(app)
                     .get(`/bookmarks/${correctId}`)
+                    .set({'Authorization': `bearer ${process.env.API_TOKEN}`})
                     .expect(200, correctBookmark)
             })
         })
@@ -66,6 +69,7 @@ describe('App', () => {
                 const nonId = 12345
                 return request(app)
                     .get(`/bookmarks/${nonId}`)
+                    .set({'Authorization': `bearer ${process.env.API_TOKEN}`})
                     .expect(404, 'No id found' )
             })
         })
