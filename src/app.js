@@ -39,12 +39,13 @@ app.get('/', (req, res) => {
 app.use(function errorHandler(error, req, res, next) {
     let response;
     if (NODE_ENV === 'production') {
-        repsonse = {error: {message: 'server error'}}
+        response = {error: {message: 'server error'}}
     }
     else {
         response = {error}
     }
-    res.status(500).json(reponse)
+    console.log(response)
+    res.status(500).json(response)
 })
 
     module.exports = app;

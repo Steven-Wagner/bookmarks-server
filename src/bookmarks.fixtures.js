@@ -24,4 +24,46 @@ return  [
   ];
 }
 
-  module.exports = {makeBookmarksTestData};
+function makeBookmarkPostTest() {
+  const expected = 
+    {
+      id: 1,
+      title: 'Test Title',
+      url: 'http://www.test-this.com',
+      rating: 4,
+      description: 'Test description'
+    };
+  const newBookmark =
+    {
+      title: 'Test Title',
+      url: 'http://www.test-this.com',
+      rating: 4,
+      description: 'Test description'
+    };
+  return {expected, newBookmark}
+}
+
+function makeMaliciousBookmark() {
+  const expected = 
+  {
+    id: 1,
+    rating: 4,
+    title: `Naughty &lt;script&gt;alert("xxs");&lt;/script&gt;`,
+    url: 'http://www.test-this.com',
+    description: `Bad image <img src="https://url-fake-does-not.exists">. But not <strong>all&lt;/strong bad.`
+  }
+  const maliciousBookmark = 
+  {
+    title: 'Naughty <script>alert("xxs");</script>',
+    rating: 4,
+    url: 'http://www.test-this.com',
+    description: `Bad image <img src="https://url-fake-does-not.exists" onerror-"alert(document.cookie);">. But not <strong>all</strong bad.`
+  }
+
+  return {
+    expected,
+    maliciousBookmark
+  }
+}
+
+  module.exports = {makeBookmarksTestData, makeBookmarkPostTest, makeMaliciousBookmark};
