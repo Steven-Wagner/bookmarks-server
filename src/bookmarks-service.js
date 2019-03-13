@@ -19,10 +19,16 @@ postNewBookmark(knex, newBookmark) {
             return res[0]
         })
 },
-deleteArticle(knex, id) {
+deleteBookmark(knex, id) {
     return knex('bookmarks')
         .where('id', id)
         .delete()
+},
+updateBookmark(knex, id, updateData){
+    return knex('bookmarks')
+        .where('id', id)
+        .update(updateData)
+        .returning('*')
 }
 }
 

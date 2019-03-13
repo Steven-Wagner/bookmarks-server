@@ -9,9 +9,17 @@ const bookmarksRouter = require('./bookmarks/bookmark')
 
 const app = express();
 
+const morganSetting = (NODE_ENV === 'production')
+    ? 'tiny'
+    : 'dev';
+
+app.use(cors())
+app.use(morgan(morganSetting));
+app.use(helmet());
+
 app.use(function validateKey(req, res, next){
     const apiToken = process.env.API_TOKEN;
-    const toValidateKey = req.get('Authorization').split(' ')[1]
+    const toValidateKey = req.get('authorization').split(' ')[1]
 
     if (!toValidateKey || toValidateKey !== apiToken) {
         logger.error(`unauthorized request to ${req.path} path`);
@@ -22,15 +30,7 @@ app.use(function validateKey(req, res, next){
     next();
 })
 
-const morganSetting = (NODE_ENV === 'production')
-    ? 'tiny'
-    : 'dev';
-
-app.use(morgan(morganSetting));
-app.use(cors());
-app.use(helmet());
-
-app.use(bookmarksRouter)
+app.use('/api/bookmarks', bookmarksRouter)
 
 app.get('/', (req, res) => {
     res.send('Hello, world')

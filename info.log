@@ -59,3 +59,41 @@
 {"message":"requires description at path /bookmarks","level":"error"}
 {"message":"bookmark with id 2 has been deleted","level":"info"}
 {"message":"bookmark with id 12345 has been deleted","level":"info"}
+{"message":"id 12345 can not be located","level":"error"}
+{"message":"requires title at path /","level":"error"}
+{"message":"requires url at path /","level":"error"}
+{"message":"requires description at path /","level":"error"}
+{"message":"requires description at path /","level":"error"}
+{"message":"bookmark with id 2 has been deleted","level":"info"}
+{"message":"bookmark with id 12345 has been deleted","level":"info"}
+{"message":"id 12345 can not be located","level":"error"}
+{"message":"requires title at path /","level":"error"}
+{"message":"requires url at path /","level":"error"}
+{"message":"requires description at path /","level":"error"}
+{"message":"requires description at path /","level":"error"}
+{"message":"bookmark with id 2 has been deleted","level":"info"}
+{"message":"bookmark with id 12345 has been deleted","level":"info"}
+{"message":"requires title at path /","level":"error"}
+{"message":"requires url at path /","level":"error"}
+{"message":"requires description at path /","level":"error"}
+{"message":"requires description at path /","level":"error"}
+{"message":"bookmark with id 2 has been deleted","level":"info"}
+{"message":"requires title at path /","level":"error"}
+{"message":"requires url at path /","level":"error"}
+{"message":"requires description at path /","level":"error"}
+{"message":"requires description at path /","level":"error"}
+{"message":"requires title at path /","level":"error"}
+{"message":"requires url at path /","level":"error"}
+{"message":"requires description at path /","level":"error"}
+{"message":"requires description at path /","level":"error"}
+{"message":"bookmark with id 2 has been deleted","level":"info"}
+{"message":"requires title at path /","level":"error"}
+{"message":"requires url at path /","level":"error"}
+{"message":"requires description at path /","level":"error"}
+{"message":"requires description at path /","level":"error"}
+{"message":"bookmark with id 2 has been deleted","level":"info"}
+{"message":"requires title at path /","level":"error"}
+{"message":"requires url at path /","level":"error"}
+{"message":"requires description at path /","level":"error"}
+{"message":"requires description at path /","level":"error"}
+{"message":"bookmark with id 2 has been deleted","level":"info"}
